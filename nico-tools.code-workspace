@@ -1,0 +1,223 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    // TypeScript Configuration
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.preferences.useAliasesForRenames": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.suggest.completeFunctionCalls": true,
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.preferences.includePackageJsonAutoImports": "on",
+    "typescript.inlayHints.parameterNames.enabled": "literals",
+    "typescript.inlayHints.variableTypes.enabled": true,
+
+    // JavaScript Configuration
+    "javascript.preferences.importModuleSpecifier": "non-relative",
+    "javascript.preferences.quoteStyle": "single",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "javascript.inlayHints.parameterNames.enabled": "literals",
+    "javascript.suggest.completeFunctionCalls": true,
+
+    // Editor Configuration
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.fontLigatures": true,
+    "editor.linkedEditing": true,
+    "editor.suggest.showStatusBar": true,
+    "editor.wordWrap": "on",
+    "editor.stickyScroll.enabled": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.scale": 2,
+    "editor.parameterHints.enabled": true,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+
+    // ESLint Configuration
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    ],
+    "eslint.format.enable": true,
+    "eslint.packageManager": "pnpm",
+    "eslint.run": "onSave",
+    "eslint.workingDirectories": [{ "mode": "auto" }],
+
+    // Formatter Overrides
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.foldingStrategy": "indentation"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.foldingStrategy": "indentation"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // Tailwind CSS
+    "tailwindCSS.emmetCompletions": true,
+    "tailwindCSS.includeLanguages": {
+      "typescript": "javascript",
+      "typescriptreact": "javascript"
+    },
+    "tailwindCSS.experimental.classRegex": [
+      ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+      ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+      ["clsx\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+    ],
+    "tailwindCSS.validate": true,
+
+    // File Explorer
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+      "*.tsx": "${capture}.test.tsx, ${capture}.stories.tsx, ${capture}.styles.ts",
+      "*.ts": "${capture}.test.ts, ${capture}.spec.ts, ${capture}.d.ts",
+      "tsconfig.json": "tsconfig.*.json",
+      "package.json": "pnpm-lock.yaml, .npmrc, .pnpmfile.cjs, yarn.lock, package-lock.json, .yarnrc.yml"
+    },
+
+    // Terminal
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font, Cascadia Code, monospace",
+    "terminal.integrated.fontSize": 13,
+
+    // Git
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.mergeEditor": true,
+    "git.openRepositoryInParentFolders": "always",
+
+    // Misc
+    "search.exclude": {
+      "**/.next": true,
+      "**/node_modules": true,
+      "**/bower_components": true,
+      "**/*.code-search": true,
+      "**/.git": true,
+      "**/dist": true,
+      "**/build": true
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.colorTheme": "Dev+ Dark",
+    "workbench.productIconTheme": "material-product-icons",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.tree.indent": 16,
+    "workbench.tree.renderIndentGuides": "always",
+    "breadcrumbs.enabled": true,
+    "debug.javascript.autoAttachFilter": "smart",
+    "debug.javascript.unmapMissingSources": true,
+    "emmet.includeLanguages": {
+      "typescript": "typescriptreact",
+      "javascript": "javascriptreact"
+    },
+    "extensions.ignoreRecommendations": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "**/node_modules": false
+    },
+    "files.eol": "\n"
+  },
+  "extensions": {
+    "recommendations": [
+      // TypeScript & JavaScript
+      "ms-vscode.vscode-typescript-next",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "yoavbls.pretty-ts-errors",
+      "mattpocock.ts-error-translator",
+      "stringham.move-ts",
+
+      // Tailwind CSS
+      "bradlc.vscode-tailwindcss",
+      "heybourn.headwind",
+      "csstools.postcss",
+
+      // UI & Visual Helpers
+      "pkief.material-icon-theme",
+      "zhuangtongfa.material-theme",
+      "usernamehw.errorlens",
+      "visualstudioexptteam.vscodeintellicode",
+      "pflannery.vscode-versionlens",
+      "formulahendry.auto-rename-tag",
+      "streetsidesoftware.code-spell-checker",
+      "mikestead.dotenv",
+
+      // Git
+      "eamodio.gitlens",
+      "mhutchie.git-graph",
+
+      // Testing & Debugging
+      "orta.vscode-jest",
+      "ms-vscode.js-debug",
+      "rangav.vscode-thunder-client",
+
+      // Developer Experience
+      "aaron-bond.better-comments",
+      "naumovs.color-highlight",
+      "wayou.vscode-todo-highlight",
+      "gruntfuggly.todo-tree",
+      "christian-kohler.path-intellisense",
+      "vincaslt.highlight-matching-tag"
+    ],
+    "unwantedRecommendations": [
+      "hookyqr.beautify",
+      "ms-vscode.vscode-typescript-tslint-plugin",
+      "dbaeumer.jshint",
+      "ms-azuretools.vscode-docker",
+      "ms-vscode-remote.remote-containers",
+      "github.copilot",
+      "github.copilot-chat",
+      "dsznajder.es7-react-js-snippets"
+    ]
+  }
+}
