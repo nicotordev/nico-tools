@@ -1,4 +1,7 @@
 import type { NextConfig } from 'next';
+import { default as _withNextIntl } from 'next-intl/plugin';
+
+const withNextIntl = _withNextIntl();
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -19,7 +22,8 @@ const nextConfig: NextConfig = {
 
   // Environment variables
   env: {
-    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
+    NEXT_PUBLIC_APP_URL:
+      process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
   },
 
   // TypeScript configuration
@@ -61,19 +65,19 @@ const nextConfig: NextConfig = {
     reactCompiler: {
       compilationMode: 'all',
     },
-    
+
     // Performance optimizations
     optimizeCss: true,
     serverSourceMaps: true,
     scrollRestoration: true,
-    
+
     // Package optimization
     optimizePackageImports: ['lucide-react'],
-    
+
     // Enhanced performance for Turbopack
     turbopackTreeShaking: true,
     turbopackPersistentCaching: false,
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
