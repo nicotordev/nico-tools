@@ -189,7 +189,6 @@
       "visualstudioexptteam.vscodeintellicode",
       "pflannery.vscode-versionlens",
       "formulahendry.auto-rename-tag",
-      "streetsidesoftware.code-spell-checker",
       "mikestead.dotenv",
 
       // Git
@@ -199,7 +198,6 @@
       // Testing & Debugging
       "orta.vscode-jest",
       "ms-vscode.js-debug",
-      "rangav.vscode-thunder-client",
 
       // Developer Experience
       "aaron-bond.better-comments",
