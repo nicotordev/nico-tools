@@ -1,7 +1,7 @@
 import type { NextConfig } from 'next';
-import { default as _withNextIntl } from 'next-intl/plugin';
+import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = _withNextIntl();
+const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -73,11 +73,13 @@ const nextConfig: NextConfig = {
 
     // Package optimization
     optimizePackageImports: ['lucide-react'],
-
-    // Enhanced performance for Turbopack
-    turbopackTreeShaking: true,
-    turbopackPersistentCaching: false,
   },
 };
 
-export default withNextIntl(nextConfig);
+export default {
+  ...withNextIntl(nextConfig),
+  experimental: {
+    ...nextConfig.experimental,
+    turbo: undefined
+  },
+};
