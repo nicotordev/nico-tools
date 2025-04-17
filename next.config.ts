@@ -51,14 +51,6 @@ const nextConfig: NextConfig = {
     resolveExtensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css'],
   },
 
-  // Optimize imports for performance
-  modularizeImports: {
-    'lucide-react': {
-      transform: 'lucide-react/dist/esm/icons/{{member}}',
-      preventFullImport: true,
-    },
-  },
-
   // Experimental features
   experimental: {
     // Enable the built-in React compiler instead of using Babel
@@ -76,10 +68,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default {
-  ...withNextIntl(nextConfig),
-  experimental: {
-    ...nextConfig.experimental,
-    turbo: undefined
-  },
-};
+export default withNextIntl(nextConfig);

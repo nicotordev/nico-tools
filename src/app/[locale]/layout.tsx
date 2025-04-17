@@ -4,7 +4,8 @@ import '../globals.css';
 import { notFound } from 'next/navigation';
 import { hasLocale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
-import { routing } from '@/i18n/routing';
+import { routing } from '@/src/i18n/routing';
+import Providers from '@/src/app/providers';
 
 const jetbrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
@@ -106,7 +107,7 @@ export default async function LocaleLayout({
       <body
         className={`${jetbrainsMono.variable} ${firaCode.variable} ${spaceGrotesk.variable} antialiased`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
