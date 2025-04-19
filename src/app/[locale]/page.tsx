@@ -2,14 +2,11 @@
 import { Header } from '@/src/components/layout/header';
 import Link from 'next/link';
 import {
-  ArrowRight,
-  Zap,
   Palette,
   Code,
   Image,
   FileText,
   Database,
-  Workflow,
   Lock,
 } from 'lucide-react';
 import { FeatureCard } from '@/src/components/home/featureCard';

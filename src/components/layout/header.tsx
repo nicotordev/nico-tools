@@ -1,7 +1,6 @@
 // components/header.tsx
 import Link from 'next/link';
-import { Home, Settings, Search } from 'lucide-react';
-import { cn } from '@/src/lib/utils';
+import { Settings, Search } from 'lucide-react';
 
 const Navigation = () => {
   return (

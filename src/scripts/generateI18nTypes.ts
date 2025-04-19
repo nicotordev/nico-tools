@@ -9,11 +9,11 @@ const BASE_LOCALE = 'en';
 /**
  * Generate TypeScript interface from translation objects
  */
-function generateTypeDefinition(obj: any, indent = 0): string {
+function generateTypeDefinition(obj: unknown, indent = 0): string {
   const indentStr = ' '.repeat(indent);
   let result = '{\n';
 
-  Object.entries(obj).forEach(([key, value]) => {
+  Object.entries(obj as Record<string, unknown>).forEach(([key, value]) => {
     result += `${indentStr}  ${key}: `;
 
     if (typeof value === 'object' && value !== null) {
@@ -45,16 +45,19 @@ function validateTranslations() {
       fs.readFileSync(path.join(MESSAGES_DIR, `${BASE_LOCALE}.json`), 'utf8')
     );
 
-    function flattenObject(obj: any, prefix = ''): Record<string, any> {
+    function flattenObject(
+      obj: Record<string, unknown>,
+      prefix = ''
+    ): Record<string, unknown> {
       return Object.keys(obj).reduce((acc, k) => {
         const pre = prefix.length ? `${prefix}.` : '';
         if (typeof obj[k] === 'object' && obj[k] !== null) {
-          Object.assign(acc, flattenObject(obj[k], `${pre}${k}`));
+          Object.assign(acc, flattenObject(obj[k] as Record<string, unknown>, `${pre}${k}`));
         } else {
           acc[`${pre}${k}`] = obj[k];
         }
         return acc;
-      }, {} as Record<string, any>);
+      }, {} as Record<string, unknown>);
     }
 
     const baseFlat = flattenObject(baseMessages);
